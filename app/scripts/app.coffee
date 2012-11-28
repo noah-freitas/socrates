@@ -1,8 +1,11 @@
-socratesApp = angular.module 'socratesApp', []
+socratesApp = angular.module 'socratesApp', ['soc-db']
 socratesApp.config [
   '$routeProvider'
   ($routeProvider) ->
-    $routeProvider.when '/', { templateUrl: 'views/main.html', controller: 'MainCtrl' }
+    $routeProvider.when '/', { templateUrl: 'views/home.html', controller: 'HomeCtrl' }
     $routeProvider.otherwise redirectTo: '/'
 ]
-window.socratesApp = socratesApp
+socratesApp.controller 'HomeCtrl', [
+  '$scope'
+  ($scope) ->
+]
