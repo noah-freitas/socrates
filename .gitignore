@@ -3,3 +3,4 @@ dist
 .sass-cache
 app/scripts/app
 test/spec/test
+.c9revisions
