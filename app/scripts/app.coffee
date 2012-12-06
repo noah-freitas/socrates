@@ -8,6 +8,10 @@ angular.module('socratesApp', ['ngResource'])
   .controller('HomeCtrl', [
     '$scope'
     'cms'
-    ($scope, cms) ->
-      $scope.lessons = cms.get 'lessons', (lessons) -> $scope.lessons = lessons
+    'feed'
+    ($scope, cms, feed) ->
+      $scope.lessons = cms.get 'lessons', (lessons) ->
+        $scope.lessons = lessons
+      $scope.submissions = feed.get 'submissions', (newSubmissions) ->
+        $scope.submissions.push newSubmissions
   ])
