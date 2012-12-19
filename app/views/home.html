@@ -4,11 +4,20 @@
 </hgroup>
 <div class="row-fluid">
     <aside class=span3>
-        <article>
-            <h1>Upcoming Due Dates</h1>
-            <ul>
-                <li><time datetime=>02-27</time> &mdash; Project 2</li>
-            </ul>
+        <article class=schedule>
+            <h1>Schedule</h1>
+            <ol>
+                <li
+                	ng-repeat="lesson in lessons"
+                	ng-class="{active: isActiveLesson($index)}"
+                >
+                	<time datetime={{lesson.pubDate}} pubdate>{{lesson.date}}</time>
+                	&mdash;
+                	<a href=lessons/{{lesson.id}}>
+                		{{lesson.topic}}
+                	</a>
+                </li>
+            </ol>
         </article>
     </aside>
     <section class=span9>
