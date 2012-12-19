@@ -21,10 +21,11 @@ angular.module('socratesApp')
         # Sync with the server.
         cmsUpdates = server.get () ->
           # Merge in the cmsUpdates and update the updated property.
-          for own key, value of cmsUpdates
-            cms[key] = value
+          ## This doesn't work yet. ##
+          for own name, data of cmsUpdates
+            cms[name] = data
           # Broadcast an update event.
-          $rootScope.$broadcast 'cmsupdate'
+          $rootScope.$broadcast 'cmsupdate', cms
           # Store the updated cms records.
           window.localStorage.cms = JSON.stringify cms
     
