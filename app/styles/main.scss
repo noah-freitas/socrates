@@ -1,1 +1,7 @@
 @import "compass_twitter_bootstrap";
+
+$activeMenuColor: orange;
+
+.schedule li.active {
+  background-color: $activeMenuColor;
+}
