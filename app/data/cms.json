@@ -1,0 +1,16 @@
+{
+	"lessons" : [
+		{
+			"id" : 1,
+			"date" : "01-14",
+			"pubDate" : "2013-01-14",
+			"topic" : "Introduction"
+		}, {
+			"id" : 2,
+			"date" : "01-21",
+			"pubDate" : "2013-01-21",
+			"topic" : "HTML5 Semantics and Structure"
+		}
+	],
+	"updated" : "Wed, 19 Dec 2012 06:10:46 GMT"
+}
