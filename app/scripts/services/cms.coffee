@@ -29,10 +29,6 @@ angular.module('socratesApp')
           # Store the updated cms records.
           window.localStorage.cms = JSON.stringify cms
     
-      ### Private ###
-      create = (objectName) ->
-        cms[objectName] = {}
-    
       ### API ###
       get: (objectName, callback) ->
         # Pass the updated object to the callback when the cms is updated.
