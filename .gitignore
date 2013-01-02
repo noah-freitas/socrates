@@ -5,3 +5,4 @@ dist
 app/scripts/directives/*.js
 app/scripts/services/*.js
 app/scripts/*.js
+test/spec/**/*.js
