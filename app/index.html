@@ -9,10 +9,10 @@
         <title></title>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width"/>
-        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel=stylesheet href=styles/main.css>
 
     </head>
-    <body ng-app="socratesApp">
+    <body ng-app="socratesApp" class=container>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -24,10 +24,11 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="fluid-container" ng-view></div>
+        <div class=fluid-container ng-view></div>
 
         <script src="scripts/vendor/angular.js"></script>
         <script src="scripts/vendor/angular-resource.js"></script>
+        <script src="https://login.persona.org/include.js"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -36,6 +37,7 @@
         <script src="scripts/services/sse.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/lessonCarousel.js"></script>
+        <script src="scripts/directives/login.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
