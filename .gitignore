@@ -2,6 +2,7 @@ temp
 dist
 .sass-cache
 .c9revisions
+app/scripts/controllers/*.js
 app/scripts/directives/*.js
 app/scripts/services/*.js
 app/scripts/*.js
