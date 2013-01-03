@@ -1,0 +1,25 @@
+<div 
+    class="navbar-form pull-right" 
+    ng-class="{
+        btn: userNotLoggedIn(), 
+        'persona-btn-container': userNotLoggedIn()
+    }"
+>
+    <div ng-show=user class=btn-group>
+        <a class="btn dropdown-toggle" data-toggle=dropdown>
+            <span class=userEmail>{{user}}</span>
+            <span class=caret></span>
+        </a>
+        <ul class=dropdown-menu>
+            <li>
+                <a href=/user/{{user}}>Profile</a>
+            </li>
+            <li>
+                <a ng-click=login()>Logout</a>
+            </li>
+        </ul>
+    </div>
+    <a ng-hide=user ng-click=login() class="persona-button orange">
+        <span>Sign In</span>
+    </a>
+</div>
