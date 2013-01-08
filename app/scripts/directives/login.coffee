@@ -9,7 +9,7 @@ angular.module('socratesApp').directive 'login', [
       '$scope'
       ($scope) ->
         # Set up our server-side persona verify service.
-        $scope.auth = $resource '/api/auth/index.php', null,
+        $scope.auth = $resource '/service/auth', null,
           login:
             method: 'GET'
             params: {}
