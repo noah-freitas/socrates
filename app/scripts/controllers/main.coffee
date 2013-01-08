@@ -13,8 +13,10 @@ angular.module('socratesApp')
         $scope.lessons = update
 
       # Get the submissions from the Feed.
-      $scope.submissions = feed.get 'submissions', (newSubmissions) ->
-        $scope.submissions.push newSubmissions
+      $scope.submissions = feed.get 'submissions', (allSubmissions, newSubmissions) ->
+        if typeof $scope.submissions is 'undefined'
+          $scope.submissions = []
+        $scope.$apply $scope.submissions = $scope.submissions.concat newSubmissions
 
 
       ### UI Functions ###

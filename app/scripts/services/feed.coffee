@@ -20,9 +20,9 @@ angular.module('socratesApp')
           arr[prop].push obj[prop]
 
         # Connect with the feed server.
-        feedServer = sse.listen 'data/feed.php', (data) ->
+        feedServer = sse.listen 'service/feed', (data) ->
           # Update feed.
-          merge feed, data, prop for own prop of data
+          # merge feed, data, prop for own prop of data
           # Broadcast any new feed data
           $rootScope.$broadcast 'feedData', data 
           # Store the new feed data in session storage.
@@ -31,6 +31,6 @@ angular.module('socratesApp')
       ### API ###
       get: (objectName, callback) ->
         # Pass the updated object to the callback when the feed has new data.
-        $rootScope.$on 'feedData', (update) -> callback feed[objectName], update
+        $rootScope.$on 'feedData', (e, update) -> callback feed[objectName], update[objectName]
         feed[objectName]
   ]

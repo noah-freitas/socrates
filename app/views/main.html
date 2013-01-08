@@ -20,6 +20,18 @@
                 </li>
             </ol>
         </article>
+        <article class="submissionFeed well">
+            <h1>Recent Submissions</h1>
+            <ol>
+                <li ng-repeat="submission in submissions">
+                	{{submission.user}}
+                	completed
+                	{{submission.exercise}}
+                	on
+                	{{submission.date}}
+                </li>
+            </ol>
+        </article>
     </aside>
     <section class=span9>
         <h1>Welcome to Socrates</h1>
