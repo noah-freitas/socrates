@@ -17,7 +17,7 @@ angular.module('socratesApp')
       if navigator.onLine is true or navigator.onLine is undefined
         # The server takes an updated parameter (timestamp) which comes
         # from the cms object if present, a 0 otherwise.
-        server = $resource 'data/cms.json', updated: cms.updated ? 0
+        server = $resource 'service/cms', updated: cms.updated ? 0
         # Sync with the server.
         cmsUpdates = server.get () ->
           # Merge in the cmsUpdates and update the updated property.
