@@ -1,5 +1,10 @@
 /*jslint console */
 
+task('default', [], function () {
+  "use strict";
+  console.log('default');
+});
+
 desc('Example!');
 task('example', ['dependency'], function () {
   "use strict";
