@@ -1,0 +1,16 @@
+Socrates
+
+Minimum Marketable Feature:
+* lesson page (very basic)
+
+User Stories:
+* "hello world" server
+- "hello world" client
+- support multiple browsers
+- marketing copy
+
+Engineering Tasks:
+* automated build
+- continuous integration
+- server-side testing
+- client-side testing
