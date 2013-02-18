@@ -3,13 +3,14 @@
 
 task('default', ['lint']);
 
-desc('Example!');
-task('example', ['dependency'], function () {
+desc('Lint everything');
+task('lint', function () {
   "use strict";
-  console.log('example task');
-});
+  var lint = require('./build/lint/lint_runner.js'),
+      files = new jake.FileList();
 
-task('dependency', function () {
-  "use strict";
-  console.log('dependency!');
+  files.include("**/*.js");
+  files.exclude('node_modules');
+  files.exclude('build');
+  lint.validateFileList(files.toArray(), { node: true }, {});
 });
