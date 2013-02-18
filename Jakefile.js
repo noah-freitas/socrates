@@ -1,4 +1,4 @@
-/*global jake */
+/*global jake, task, desc */
 /*jslint console: true, node: true */
 
 task('default', ['lint']);
@@ -11,6 +11,10 @@ task('lint', function () {
 
   files.include("**/*.js");
   files.exclude('node_modules');
-  files.exclude('build');
-  lint.validateFileList(files.toArray(), { node: true }, {});
+
+  var options = {
+    node: true
+  };
+
+  lint.validateFileList(files.toArray(), options, {});
 });
