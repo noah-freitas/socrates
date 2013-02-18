@@ -1,9 +1,7 @@
-/*jslint console */
+/*global jake */
+/*jslint console: true, node: true */
 
-task('default', [], function () {
-  "use strict";
-  console.log('default');
-});
+task('default', ['lint']);
 
 desc('Example!');
 task('example', ['dependency'], function () {
