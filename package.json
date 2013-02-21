@@ -1,0 +1,22 @@
+{
+  "name": "socrates",
+  "version": "0.0.0",
+  "description": "Classroom app.",
+  "main": "main.js",
+  "dependencies": {
+    "jshint": "~0.9.1",
+    "jake": "~0.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noah-freitas/socrates.git"
+  },
+  "author": "Noah Freitas <noah.j.freitas@gmail.com>",
+  "license": "BSD",
+  "gitHead": "e4460cc8c8de955178839d10eed0e5591a62c019",
+  "readmeFilename": "README.md"
+}
