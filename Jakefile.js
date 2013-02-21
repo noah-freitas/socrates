@@ -1,4 +1,4 @@
-/*global jake, task, desc */
+/*global jake, task, desc, fail */
 /*jslint console: true, node: true */
 
 var nodeLintOptions = function () {
@@ -35,7 +35,9 @@ task('lint', function () {
   files.include("**/*.js");
   files.exclude('node_modules');
 
-  lint.validateFileList(files.toArray(), nodeLintOptions(), {});
+  if (!lint.validateFileList(files.toArray(), nodeLintOptions(), {})) {
+    fail('Lint failed!');
+  }
 });
 
 desc('Integrate');
