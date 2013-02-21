@@ -44,11 +44,13 @@ desc('Integrate');
 task('integrate', ['default'], function () {
   "use strict";
 
+  console.log('\n\nIntegration:');
   console.log('1. Make sure "git status" is clean.');
   console.log('2. Build on the integration box.');
   console.log('   a. Go to integration box.');
   console.log('   b. "git pull" ');
   console.log('   c. jake.bat');
+  console.log('   d. If jake fails, stop!  Try again.');
   console.log('3. "git checkout integration"');
   console.log('4. "git merge tdd --no-ff --log"');
   console.log('5. "git checkout tdd"');
