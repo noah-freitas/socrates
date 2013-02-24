@@ -4,8 +4,8 @@
   "description": "Classroom app.",
   "main": "main.js",
   "dependencies": {
+    "jake": "~0.3.7",
     "jshint": "~0.9.1",
-    "jake": "~0.3.7"
   },
   "devDependencies": {},
   "scripts": {
