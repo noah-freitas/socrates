@@ -59,6 +59,6 @@ task('lint', function () {
 desc('Test everything');
 task('test', function () {
   "use strict";
-  var reporter = require('nodeunit').reporters.minimal;
+  var reporter = require('nodeunit').reporters['default'];
   reporter.run(['src/server/_server_test.js']);
 });
