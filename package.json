@@ -6,6 +6,7 @@
   "dependencies": {
     "jake": "~0.3.7",
     "jshint": "~0.9.1",
+    "nodeunit": "~0.7.4"
   },
   "devDependencies": {},
   "scripts": {
