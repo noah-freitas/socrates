@@ -24,21 +24,7 @@ var nodeLintOptions = function () {
 };
 
 desc('Build and test');
-task('default', ['lint']);
-
-desc('Lint everything');
-task('lint', function () {
-  "use strict";
-  var lint = require('./build/lint/lint_runner.js'),
-      files = new jake.FileList();
-
-  files.include("**/*.js");
-  files.exclude('node_modules');
-
-  if (!lint.validateFileList(files.toArray(), nodeLintOptions(), {})) {
-    fail('Lint failed!');
-  }
-});
+task('default', ['lint', 'test']);
 
 desc('Integrate');
 task('integrate', ['default'], function () {
@@ -54,4 +40,25 @@ task('integrate', ['default'], function () {
   console.log('3. "git checkout integration"');
   console.log('4. "git merge tdd --no-ff --log"');
   console.log('5. "git checkout tdd"');
+});
+
+desc('Lint everything');
+task('lint', function () {
+  "use strict";
+  var lint = require('./build/lint/lint_runner.js'),
+      files = new jake.FileList();
+
+  files.include("**/*.js");
+  files.exclude('node_modules');
+
+  if (!lint.validateFileList(files.toArray(), nodeLintOptions(), {})) {
+    fail('Lint failed!');
+  }
+});
+
+desc('Test everything');
+task('test', function () {
+  "use strict";
+  var reporter = require('nodeunit').reporters['default'];
+  reporter.run(['test']);
 });
