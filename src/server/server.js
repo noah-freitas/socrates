@@ -1,3 +1,6 @@
-/*jslint browser: true */
+/*jslint browser: true, exports: true */
 
-console.log('Hello, I\'m a server. No Really.');
+exports.number = function () {
+  "use strict";
+  return 3;
+};
